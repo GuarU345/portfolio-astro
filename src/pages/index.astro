@@ -1,0 +1,17 @@
+---
+import Presentation from "../components/Presentation.astro";
+import Projects from "../components/Projects.astro";
+import StackTechnologies from "../components/StackTechnologies.astro";
+import Socials from "../components/Socials.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Welcome to Astro.">
+  <main class="grid grid-cols-12 h-screen grid-rows-12 mt-1 gap-1 w-[900px]">
+    <Presentation />
+    <StackTechnologies />
+    <Projects />
+  </main>
+</Layout>
+
+<style></style>
