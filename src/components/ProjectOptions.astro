@@ -3,6 +3,14 @@ const { hrefGit, hrefWeb } = Astro.props;
 ---
 
 <div class="flex gap-2 mt-2">
-  <a href={hrefGit} class="bg-zinc-950 p-2 rounded-md"><p>Ver codigo</p></a>
-  <a href={hrefWeb} class="bg-zinc-950 p-2 rounded-md"><p>Ir al sitio</p></a>
+  <a
+    target="_blank"
+    href={hrefGit}
+    class="bg-zinc-950 p-2 rounded-md hover:scale-105"><p>Ver codigo</p></a
+  >
+  <a
+    target="_blank"
+    href={hrefWeb}
+    class="bg-zinc-950 p-2 rounded-md hover:scale-105"><p>Ir al sitio</p></a
+  >
 </div>
