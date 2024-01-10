@@ -1,13 +1,12 @@
 ---
-
+import ArrowIcon from "./icons/Arrow.astro";
 ---
 
-<section
-  class="grid place-content-center col-span-12 row-span-2 border-2 rounded-md"
+<a
+  href="/projects"
+  class="flex justify-between items-center gap-4 px-2 col-span-12 border-2 h-[70px] rounded-md hover:scale-105 transition-transform"
 >
-  <div class="flex justify-center items-center">
-    <a href="/projects"><p>Ver Proyectos</p></a>
-  </div>
-</section>
-
-<style></style>
+  <p></p>
+  <p>Ver Proyectos</p>
+  <ArrowIcon class="text-white" />
+</a>

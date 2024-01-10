@@ -4,17 +4,23 @@ import Projects from "../components/Projects.astro";
 import StackTechnologies from "../components/StackTechnologies.astro";
 import Layout from "../layouts/Layout.astro";
 import Inspiration from "../components/Inspiration.astro";
+import Github from "../components/Github.astro";
+import Socials from "../components/Socials.astro";
 ---
 
 <Layout title="Welcome to Astro.">
-  <main class="grid grid-rows-12 h-screen mt-1 gap-4 w-[900px]">
-    <section class="grid grid-cols-12 grid-rows-12 row-span-8 gap-6">
+  <main class="flex flex-col h-screen mt-1 gap-4 w-[900px]">
+    <section class="grid grid-cols-12 grid-rows-12 gap-4">
       <Presentation />
       <StackTechnologies />
       <Inspiration />
     </section>
-    <section class="grid">
+    <section class="grid grid-cols-12">
       <Projects />
     </section>
+    <section class="grid grid-cols-12 gap-4">
+      <Github />
+    </section>
+    <section></section>
   </main>
 </Layout>
