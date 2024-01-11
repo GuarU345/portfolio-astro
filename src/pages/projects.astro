@@ -1,11 +1,34 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import { PROJECTS } from "../utils/constants";
+
+const firstProject = PROJECTS[0];
 ---
 
-<Layout title="my projects">
-  <main class="grid grid-cols-12 grid-rows-12 h-screen mt-1 gap-4 w-[900px]">
-    <picture class="col-span-8 row-span-10 group">
-      <img class="" src="/spotify.png" alt="image of project spotify clone" />
-    </picture>
+<Layout title="proyectos">
+  <main class="grid h-screen mt-1 gap-2 w-[900px]">
+    <>
+      <section class="grid place-content-center">
+        <p
+          class="text-3xl bg-clip-text text-transparent bg-gradient-to-r from-white/70 from-10% to-green-600"
+        >
+          {firstProject.name}
+        </p>
+      </section>
+      <section class="p-2 flex flex-col gap-4">
+        {
+          firstProject.descriptions.map((description) => (
+            <p class="text-sm">{description.paragraph}</p>
+          ))
+        }
+      </section>
+      <picture class="group">
+        <img
+          class=""
+          src={firstProject.image.src}
+          alt={firstProject.image.alt}
+        />
+      </picture>
+    </>
   </main>
 </Layout>
