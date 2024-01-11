@@ -10,7 +10,7 @@ const firstProject = PROJECTS[0];
     <>
       <section class="grid place-content-center">
         <p
-          class="text-3xl bg-clip-text text-transparent bg-gradient-to-r from-white/70 from-10% to-green-600"
+          class="text-4xl bg-clip-text text-transparent bg-gradient-to-r from-white/70 from-10% to-green-600"
         >
           {firstProject.name}
         </p>
@@ -18,7 +18,7 @@ const firstProject = PROJECTS[0];
       <section class="p-2 flex flex-col gap-4">
         {
           firstProject.descriptions.map((description) => (
-            <p class="text-sm">{description.paragraph}</p>
+            <p class="text-base">{description.paragraph}</p>
           ))
         }
       </section>
