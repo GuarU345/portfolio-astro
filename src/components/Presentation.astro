@@ -1,5 +1,11 @@
+---
+import SocialPill from "./SocialPill.astro";
+import LinkedIcon from "./icons/LinkedIcon.astro";
+import GithubIcon from "./icons/GithubIcon.astro";
+---
+
 <section
-  class="col-span-8 row-span-12 flex flex-col border-2 justify-center rounded-md"
+  class="col-span-8 relative row-span-12 flex flex-col border-2 justify-center rounded-md"
 >
   <div class="px-6 lg:px-4 py-2 flex items-center gap-4">
     <img
@@ -19,6 +25,18 @@
         participo.
       </p>
     </div>
+  </div>
+  <div class="absolute flex gap-x-4 bottom-0 w-full p-2">
+    <SocialPill
+      href="https://www.linkedin.com/in/abel-omar-dominguez-martinez-083264256/"
+    >
+      <LinkedIcon class="size-4 md:size-6" />
+      LinkedIn
+    </SocialPill>
+    <SocialPill href="https://github.com/GuarU345">
+      <GithubIcon class="size-4 md:size-6" />
+      Github
+    </SocialPill>
   </div>
 </section>
 
