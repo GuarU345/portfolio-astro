@@ -5,39 +5,30 @@ import GithubIcon from "./icons/GithubIcon.astro";
 ---
 
 <section
-  class="col-span-8 relative row-span-12 flex flex-col border-2 justify-center rounded-md"
+  class="col-span-8 row-span-4 border-2 p-4 border-transparent flex items-end rounded-xl bg-zinc-900"
 >
-  <div class="px-6 lg:px-4 py-2 flex items-center gap-4">
-    <img
-      class="w-56 h-56 ml-4 rounded-full"
-      src="yo_2.jpg"
-      alt="dev guaru345 photo"
-    />
-    <div>
-      <p class="text-balance text-3xl">Hola, soy Abel Omar</p>
-      <p class="text-pretty mt-2">
-        Desarrollador Full Stack desde hace mas de 2 años, soy una persona
-        apasionada dedicada a la que le encantan los retos y desafios. Esta
-        pasion me llevó a descubrir el maravilloso mundo de la programación.
-      </p>
-      <p>
-        Mi compromiso y entusiasmo se reflejan en cada proyecto en el que
-        participo.
-      </p>
+  <div class="flex flex-col gap-y-2">
+    <p class="text-pretty text-2xl font-bold">Abel Omar Domínguez Martínez</p>
+    <p class="text-xl">Desarrollador Full Stack</p>
+    <div class="flex gap-x-4">
+      <SocialPill
+        href="https://www.linkedin.com/in/abel-omar-dominguez-martinez-083264256/"
+      >
+        <LinkedIcon class="size-4 md:size-6" />
+        LinkedIn
+      </SocialPill>
+      <SocialPill href="https://github.com/GuarU345">
+        <GithubIcon class="size-4 md:size-6" />
+        Github
+      </SocialPill>
     </div>
-  </div>
-  <div class="absolute flex gap-x-4 bottom-0 w-full p-2">
-    <SocialPill
-      href="https://www.linkedin.com/in/abel-omar-dominguez-martinez-083264256/"
-    >
-      <LinkedIcon class="size-4 md:size-6" />
-      LinkedIn
-    </SocialPill>
-    <SocialPill href="https://github.com/GuarU345">
-      <GithubIcon class="size-4 md:size-6" />
-      Github
-    </SocialPill>
   </div>
 </section>
 
-<style></style>
+<style>
+  section {
+    background-image: url("/yo_2.jpg");
+    background-position: center;
+    background-size: cover;
+  }
+</style>

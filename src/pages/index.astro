@@ -3,19 +3,20 @@ import Presentation from "../components/Presentation.astro";
 import StackTechnologies from "../components/StackTechnologies.astro";
 import Layout from "../layouts/Layout.astro";
 import Inspiration from "../components/Inspiration.astro";
-import Jobs from "../components/Jobs.astro";
+import { PROJECTS } from "../utils/constants";
+import Projects from "../components/Projects.astro";
 ---
 
 <Layout title="Welcome to Astro.">
-  <main class="flex flex-col h-screen mt-1 gap-4 w-[900px]">
-    <section class="grid grid-cols-12 grid-rows-12 gap-4">
+  <main class="flex flex-col h-full mt-4 gap-4 w-[900px]">
+    <section class="grid grid-cols-12 grid-rows-3 gap-4 h-[370px]">
       <Presentation />
       <StackTechnologies />
       <Inspiration />
     </section>
-    <section class="grid place-content-center">Proyectos</section>
-    <section>
-      <Jobs />
+    <section class="grid place-content-center mt-4">
+      <p class="text-2xl">PROYECTOS</p>
     </section>
+    <Projects />
   </main>
 </Layout>

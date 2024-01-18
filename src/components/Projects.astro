@@ -1,12 +1,23 @@
 ---
-import ArrowIcon from "./icons/Arrow.astro";
+import { PROJECTS } from "../utils/constants";
+
+const firstProject = PROJECTS[0];
 ---
 
-<a
-  href="/projects"
-  class="flex justify-between items-center gap-4 px-2 col-span-12 border-2 h-[70px] rounded-md hover:scale-105 transition-transform"
+<section
+  class="grid place-content-center px-2 py-4 border-2 border-transparent rounded-xl bg-zinc-900"
 >
-  <p></p>
-  <p>PROYECTOS</p>
-  <ArrowIcon class="text-white" />
-</a>
+  <p
+    class="text-3xl bg-clip-text text-transparent bg-gradient-to-r from-white/70 from-10% to-green-600"
+  >
+    {firstProject.name}
+  </p>
+
+  <picture class="mt-2">
+    <img
+      class="w-[700px] h-[400px]"
+      src={firstProject.image.src}
+      alt={firstProject.image.alt}
+    />
+  </picture>
+</section>
