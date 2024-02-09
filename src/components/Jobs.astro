@@ -1,6 +1,7 @@
 ---
 import { JOBS } from "../utils/constants";
 import JobContent from "./JobContent.astro";
+import DownloadCV from "./DownloadCV";
 
 const zaroData = JOBS[0];
 const jarsaData = JOBS[1];
@@ -19,10 +20,11 @@ const argosData = JOBS[2];
     activities={jarsaData.activities}
   />
 </section>
-<section class="flex flex-col gap-1 rounded-xl">
+<section class="grid grid-cols-[500px,1fr] gap-4 rounded-xl">
   <JobContent
     title={argosData.title}
     date={argosData.date}
     activities={argosData.activities}
   />
+  <DownloadCV client:visible />
 </section>
