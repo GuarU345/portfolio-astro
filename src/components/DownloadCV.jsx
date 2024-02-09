@@ -18,7 +18,7 @@ const DownloadCV = () => {
             onClick={handleClick}
             class="grid place-content-center bg-zinc-800 rounded-xl hover:opacity-80"
         >
-            <p>PROXIMAMENTE...</p>
+            <p class="font-bold">Descarga mi CV y permiteme continuar con mi proxima gran aventura profesional</p>
         </button>
     )
 }
