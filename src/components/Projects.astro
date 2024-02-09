@@ -1,21 +1,27 @@
 ---
 import { PROJECTS } from "../utils/constants";
+import Arrow from "./icons/Arrow.astro";
 
 const firstProject = PROJECTS[0];
 ---
 
 <section
-  class="grid place-content-center px-2 py-4 border-2 border-transparent rounded-xl bg-zinc-900"
+  class="grid place-content-center px-2 py-4 border-2 border-transparent rounded-xl bg-zinc-800"
 >
-  <p
-    class="text-3xl bg-clip-text text-transparent bg-gradient-to-r from-white/70 from-10% to-green-600"
-  >
-    {firstProject.name}
-  </p>
+  <div class="flex justify-between items-center">
+    <p
+      class="text-3xl bg-clip-text text-transparent bg-gradient-to-r from-white/70 from-10% to-blue-700"
+    >
+      {firstProject.name}
+    </p>
+    <a target="_blank" href={firstProject.url}>
+      <p><Arrow /></p>
+    </a>
+  </div>
 
   <picture class="mt-2">
     <img
-      class="w-[700px] h-[400px]"
+      class="rounded-xl"
       src={firstProject.image.src}
       alt={firstProject.image.alt}
     />

@@ -1,12 +1,28 @@
 ---
-import ArrowIcon from "./icons/Arrow.astro";
+import { JOBS } from "../utils/constants";
+import JobContent from "./JobContent.astro";
+
+const zaroData = JOBS[0];
+const jarsaData = JOBS[1];
+const argosData = JOBS[2];
 ---
 
-<a
-  href="/jobs"
-  class="flex justify-between items-center gap-4 px-2 col-span-12 border-2 h-[70px] rounded-md hover:scale-105 transition-transform"
->
-  <p></p>
-  <p>EXPERIENCIA LABORAL</p>
-  <ArrowIcon class="text-white" />
-</a>
+<section class="flex gap-4 w-[900px]">
+  <JobContent
+    title={zaroData.title}
+    date={zaroData.date}
+    activities={zaroData.activities}
+  />
+  <JobContent
+    title={jarsaData.title}
+    date={jarsaData.date}
+    activities={jarsaData.activities}
+  />
+</section>
+<section class="flex flex-col gap-1 rounded-xl">
+  <JobContent
+    title={argosData.title}
+    date={argosData.date}
+    activities={argosData.activities}
+  />
+</section>
