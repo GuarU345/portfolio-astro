@@ -5,7 +5,7 @@ export const PROJECTS = [
       src: "/guarutify.webp",
       alt: "image of project spotify clone",
     },
-    url: 'https://guarutify.netlify.app'
+    url: 'https://spotify-clone-react-ts.vercel.app/'
   },
 ];
 
